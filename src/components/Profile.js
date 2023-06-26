@@ -8,7 +8,7 @@ import axios from "axios";
 function Profile() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:7000/", {
+    fetch("https://crud-backend-qw7t.onrender.com/", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -16,7 +16,7 @@ function Profile() {
   }, []);
   const Delette = async (id) => {
     await axios
-      .delete(`http://localhost:7000/user/delete/${id}`)
+      .delete(`https://crud-backend-qw7t.onrender.com/${id}`)
       .then((res) => {
         console.log(res);
       })

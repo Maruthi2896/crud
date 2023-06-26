@@ -30,7 +30,7 @@ function EditProfile() {
     });
   };
   useEffect(() => {
-    fetch(`http://localhost:7000/${id}`, {
+    fetch(`https://crud-backend-qw7t.onrender.com/${id}`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -49,16 +49,18 @@ function EditProfile() {
   };
   const Submitt = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:7000/edit-profile/${id}`, data).then(() =>
-      setData({
-        name: "",
-        img: "",
-        about: "",
-        role: "",
-        company: "",
-        address: "",
-      })
-    );
+    axios
+      .put(`https://crud-backend-qw7t.onrender.com/edit-profile/${id}`, data)
+      .then(() =>
+        setData({
+          name: "",
+          img: "",
+          about: "",
+          role: "",
+          company: "",
+          address: "",
+        })
+      );
   };
 
   return (

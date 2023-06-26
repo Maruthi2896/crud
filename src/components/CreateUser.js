@@ -48,7 +48,7 @@ function CreateUser() {
     else {
       try {
         await axios
-          .post(`http://localhost:7000/create-user`, arr)
+          .post(`https://crud-backend-qw7t.onrender.com/create-user`, arr)
           .then((res) => {
             console.log(res);
           });

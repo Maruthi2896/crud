@@ -9,7 +9,7 @@ function ListUsers() {
   const [data, setData] = useState([]);
   const Delette = async (id) => {
     await axios
-      .delete(`http://localhost:7000/user/delete/${id}`)
+      .delete(`https://crud-backend-qw7t.onrender.com/user/delete/${id}`)
       .then((res) => {
         console.log(res);
       })
@@ -17,7 +17,7 @@ function ListUsers() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:7000/", {
+    fetch("https://crud-backend-qw7t.onrender.com/", {
       method: "GET",
     })
       .then((res) => res.json())
